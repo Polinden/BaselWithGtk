@@ -1,1 +1,1 @@
-# BazelWithGtk
+# Bazel Gtk C++ Template
