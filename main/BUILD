@@ -7,13 +7,12 @@ cc_binary(
             "-Iexternal/glib/includes",
             "-Iexternal/gdk"],
 
-    deps = ["//lib:SIM800L",
-	    "//gtk:gtk",
-	    "//glib:glib",
-	    "//gdk-pixbuf:gdk-pixbuf",
-	    "//cairo:cairo",
-	    "//hb:hb",
-	    "//atk:atk",
-	    "//pango:pango",
-            "//gdk:gdk",]
+    deps = ["//lib/gtk:gtk",
+	    "//lib/glib:glib",
+	    "//lib/gdk-pixbuf:gdk-pixbuf",
+	    "//lib/cairo:cairo",
+	    "//lib/hb:hb",
+	    "//lib/atk:atk",
+	    "//lib/pango:pango",
+            "//lib/gdk:gdk",]
 )
