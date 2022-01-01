@@ -16,14 +16,21 @@ int main(int argc, char *argv[]) {
 
   window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
   gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
-  gtk_window_set_default_size(GTK_WINDOW(window), 250, 180);
+  gtk_window_set_default_size(GTK_WINDOW(window), 550, 360);
   gtk_window_set_title(GTK_WINDOW(window), "GtkTable");
+  gtk_window_set_keep_above (GTK_WINDOW(window), TRUE);
 
   gtk_container_set_border_width(GTK_CONTAINER(window), 5);
 
   table = gtk_table_new(4, 4, TRUE);
   gtk_table_set_row_spacings(GTK_TABLE(table), 2);
   gtk_table_set_col_spacings(GTK_TABLE(table), 2);
+
+  PangoFontDescription *df;
+  df = pango_font_description_from_string("Monospace");
+  pango_font_description_set_size(df,40*PANGO_SCALE);
+  gtk_widget_modify_font(table, df);
+
 
   int i = 0;
   int j = 0;
